@@ -22,3 +22,13 @@
 main {
   grid-area: main;
 }
+
+.mainWrapper {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainFilter {
+  width: 32%;
+}

@@ -1,9 +1,10 @@
 import React from "react";
+import { words } from "../../words";
 import "./Footer.css";
 function Footer() {
   return (
     <>
-      <footer>&copy; copy Right Tarek Mohamed 2022</footer>
+      <div className="footer">{words.footerContent}</div>
     </>
   );
 }
