@@ -28,7 +28,3 @@ main {
   display: flex;
   justify-content: space-between;
 }
-
-.mainFilter {
-  width: 32%;
-}
