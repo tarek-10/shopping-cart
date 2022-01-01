@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Products.css";
+import ProductModal from "./ProductModal";
 function Products({ products }) {
-  console.log(products);
+  const [product, setProduct] = useState("");
+  const operModal = (product) => {
+    setProduct(product);
+  };
+  const closeModal = () => {
+    setProduct(false);
+  };
   return (
     // <div className="products-wrapper">
     //   {products.map((product) => (
@@ -22,15 +29,18 @@ function Products({ products }) {
       {products.map((product) => (
         <div key={product.id} className="col-md-2 mx-3">
           <div className="items">
-            <img src={product.imageUrl} alt={product.title} />
+            <a href="#" onClick={() => operModal(product)}>
+              <img src={product.imageUrl} alt={product.title} />
+            </a>
             <div className="product-desc">
               <span>{product.title} </span>
-              <span>{product.price}</span>
+              <span> ${product.price}</span>
             </div>
-            <button>Add To Cart</button>
+            <button className="product-btn">Add To Cart</button>
           </div>
         </div>
       ))}
+      <ProductModal product={product} closeModal={closeModal} />
     </div>
   );
 }
