@@ -4,7 +4,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <>
-      <div className="footer">{words.footerContent}</div>
+      <div className="footer">&copy;{words.footerContent}</div>
     </>
   );
 }

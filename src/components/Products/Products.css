@@ -26,12 +26,34 @@
     margin: 20px 0;
 }
 
-button {
+.product-btn {
     border: 0;
     width: 100%;
     padding: 4px;
     background-color: #2a5ea2;
     color: white;
     cursor: pointer;
-    border-radius: 7px;
+    border-radius: 5px;
+}
+
+.productDetailsWrapper img {
+    width: 40%;
+    display: block;
+    margin: 25px auto;
+}
+
+.productDetailsWrapper p {
+    color: #2a5ea2;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+.closeModal {
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
