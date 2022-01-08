@@ -23,8 +23,16 @@ main {
   grid-area: main;
 }
 
-.mainWrapper {
-  padding: 30px;
+.wrapper {
   display: flex;
   justify-content: space-between;
+  padding: 20px;
+}
+
+.wrapper .productWrapper {
+  width: 68%;
+}
+
+.wrapper .mainFilter {
+  width: 30%;
 }

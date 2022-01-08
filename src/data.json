@@ -5,7 +5,7 @@
     "imageUrl": "/images/shoes.jpg",
     "desc": "nike orignal shoes",
     "price": 32,
-    "size": ["S", "M"]
+    "sizes": ["S", "M"]
   },
   {
     "id": "id2",
@@ -13,7 +13,7 @@
     "imageUrl": "/images/apple2.jpg",
     "desc": "labtop apple for You",
     "price": 36,
-    "size": ["XL", "L"]
+    "sizes": ["XL", "L"]
   },
   {
     "id": "id3",
@@ -21,7 +21,7 @@
     "imageUrl": "/images/playstation5.jpg",
     "desc": "Latest version of playStation",
     "price": 30,
-    "size": ["XS", "XXL"]
+    "sizes": ["XS", "XXL"]
   },
   {
     "id": "id4",
@@ -29,6 +29,6 @@
     "imageUrl": "/images/nicine.jpg",
     "desc": "viatmin b3 for your heart",
     "price": 44,
-    "size": ["M", "L"]
+    "sizes": ["M", "L"]
   }
 ]
