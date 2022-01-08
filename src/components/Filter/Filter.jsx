@@ -1,14 +1,18 @@
 import React from "react";
 import "./Filter.css";
-function Filter() {
+function Filter({ handelFilterBySize, size, handleFilterBySort, sort }) {
   return (
     <>
       <div className="mainFilter">
         <h2 className="filter-title">Filter</h2>
         <div className="num-of-products">number of product 4</div>
         <div className="filter-by-size">
-          <span className="filter-size">Filer</span>
-          <select name="filter-select">
+          <span className="filter-size">Filter</span>
+          <select
+            value={size}
+            className="filter-select"
+            onChange={handelFilterBySize}
+          >
             <option value="ALL">ALL</option>
             <option value="XS">XS</option>
             <option value="S">S</option>
@@ -18,11 +22,15 @@ function Filter() {
             <option value="XXL">XXL</option>
           </select>
         </div>
-        <div className="filter-by-newest">
-          <span className="filter-size">Filter</span>
-          <select name="filter-select">
-            <option value="Lastest">Latest</option>
-            <option value="Lower">Lower</option>
+        <div className="filter-by-sort">
+          <span className="filter-size">Order</span>
+          <select
+            value={sort}
+            className="filter-select"
+            onChange={handleFilterBySort}
+          >
+            <option value="Latest">Latest</option>
+            <option value="Lowest">Lowest</option>
             <option value="Heighest">Highest</option>
           </select>
         </div>

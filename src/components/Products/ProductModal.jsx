@@ -11,6 +11,7 @@ function ProductModal({ product, closeModal }) {
         <img src={product.imageUrl} alt={product.title} />
         <p>{product.title}</p>
         <p>{product.desc}</p>
+        <p>${product.price}</p>
       </div>
     </Modal>
   );
