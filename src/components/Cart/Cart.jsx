@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
+import Bounce from "react-reveal/Bounce";
 import "./Cart.css";
 function Cart({ cartItems, removeFromCart }) {
   const [showForm, setShowForm] = useState(false);
@@ -30,19 +31,21 @@ function Cart({ cartItems, removeFromCart }) {
         )}
       </div>
       {cartItems.map((item) => (
-        <div className="cart-items" key={item.id}>
-          <img src={item.imageUrl} alt={item.title} />
-          <div className="cart-info">
-            <div>
-              <p>title:{item.title}</p>
-              <p>Qty: {item.qty}</p>
-              <p>price:${item.price}</p>
+        <Bounce bottom cascade>
+          <div className="cart-items" key={item.id}>
+            <img src={item.imageUrl} alt={item.title} />
+            <div className="cart-info">
+              <div>
+                <p>title:{item.title}</p>
+                <p>Qty: {item.qty}</p>
+                <p>price:${item.price}</p>
+              </div>
             </div>
+            <button className="cart-btn" onClick={() => removeFromCart(item)}>
+              Remove
+            </button>
           </div>
-          <button className="cart-btn" onClick={() => removeFromCart(item)}>
-            Remove
-          </button>
-        </div>
+        </Bounce>
       ))}
       {cartItems.length > 0 && (
         <div className="cart-footer">
