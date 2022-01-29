@@ -5,6 +5,8 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Products from "./components/Products/Products";
 import data from "./data.json";
+import { Provider } from "react-redux";
+import store from "./Store/store";
 export default function App() {
   const [products, setProducts] = useState(data);
   const [sort, setSort] = useState("");
@@ -80,7 +82,7 @@ export default function App() {
   //end
 
   return (
-    <>
+    <Provider store={store}>
       <div className="layout">
         <Header />
         <main>
@@ -98,6 +100,6 @@ export default function App() {
         </main>
         <Footer />
       </div>
-    </>
+    </Provider>
   );
 }
